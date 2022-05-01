@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    
 
     <title>Calculadora de siguras geometricas</title>
 </head>
@@ -27,7 +28,7 @@
                     <div class="card-header">Cuadrado</div>
                     <div class="card-body">
                       <h4 class="card-title">calcula automaticamente </h4>
-                      <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Area</button>
+                      <button type="button" class="btn btn-secondary" id="areaCuadrado">Area</button>
                       <button type="button" class="btn btn-warning">Perimetro</button>
 
                     </div>
@@ -39,7 +40,7 @@
                     <div class="card-header">Triangulo</div>
                     <div class="card-body">
                       <h4 class="card-title">calcula automaticamente </h4>
-                      <button type="button" class="btn btn-secondary">Area</button>
+                      <button type="button" class="btn btn-secondary" id="areaTriangulo">Area</button>
                       <button type="button" class="btn btn-warning">Perimetro</button>
 
                     </div>
@@ -56,7 +57,7 @@
                     <div class="card-header">Rectangulo</div>
                     <div class="card-body">
                       <h4 class="card-title">calcula automaticamente </h4>
-                      <button type="button" class="btn btn-secondary">Area</button>
+                      <button type="button" class="btn btn-secondary" id="areaRectangulo">Area</button>
                       <button type="button" class="btn btn-warning">Perimetro</button>
 
                     </div>
@@ -68,7 +69,7 @@
                     <div class="card-header">Rombo</div>
                     <div class="card-body">
                       <h4 class="card-title">calcula automaticamente </h4>
-                      <button type="button" class="btn btn-secondary">Area</button>
+                      <button type="button" class="btn btn-secondary" id="areaRombo">Area</button>
                       <button type="button" class="btn btn-warning">Perimetro</button>
 
                     </div>
@@ -83,7 +84,7 @@
                     <div class="card-header">Romboide</div>
                     <div class="card-body">
                       <h4 class="card-title">calcula automaticamente </h4>
-                      <button type="button" class="btn btn-secondary">Area</button>
+                      <button type="button" class="btn btn-secondary" id="areaRomboide">Area</button>
                       <button type="button" class="btn btn-warning">Perimetro</button>
 
                     </div>
@@ -97,13 +98,17 @@
             <div class="alert alert-dismissible alert-warning">
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                 <h4 class="alert-heading">Alerta!</h4>
-                <p class="mb-0">En este recuadro se mostrara como ha sido creado, un dibujo con la figura geometrica con las medidas establecidas <a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
+                <p class="mb-0">En este recuadro se mostrara como ha sido creado, un dibujo con la figura geometrica con las medidas establecidas.</p>
+               
+
               </div>
             
 
         </div>
         <div class="row">
-            
+            <canvas id="dibujar_en_canvas">
+
+            </canvas>
         </div>
 
 
@@ -115,6 +120,9 @@
 
 
     <!-- start modals  -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+<script src="../assets/js/main.js"> </script>
 
 
     
