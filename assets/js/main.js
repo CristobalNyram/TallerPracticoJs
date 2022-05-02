@@ -451,6 +451,27 @@ function area_romboide(base, altura)
 
 ///CANVAS///
 const canvas =document.getElementById('dibujar_en_canvas');
-const ctx =canvas.getContext('2d');
+let ctx =canvas.getContext('2d');
 
-ctx.strokeRect(50, 35, 50, 50); 
+
+function dibujar_figura(opcion)
+{
+    switch (opcion) {
+        case 'romboide':
+            
+            break;
+         case 'cuadrado':
+            
+             break;
+         case 'triangulo':
+            
+             break;
+         case 'rectangulo':
+            
+             break;
+        case  'rombo':
+            
+             break;
+    }
+
+}

@@ -1,0 +1,22 @@
+
+.formulario-calculadora
+{
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-right: 1em;
+    padding-left:  1em;;
+
+    border: 1.5px groove black;
+    border-radius: 10px;
+
+    box-shadow:  12px 10px  15px  2px  #040421c5;
+
+    
+
+}
+.card-descuento
+{
+     display: none;
+     padding: 2rem;
+     border: 1.5px dotted black;
+}
