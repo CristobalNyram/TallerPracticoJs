@@ -40,11 +40,11 @@
                             
                             <div class="input-group mb-3">
                               <span class="input-group-text">%</span>
-                              <input type="number" class="form-control" placeholder="descuento" spellcheck="false" data-ms-editor="true" id="">
+                              <input type="number" class="form-control" placeholder="descuento" spellcheck="false" data-ms-editor="true"  id="descuento_producto">
                             </div>
                             <div class="input-group mb-3">
                               <span class="input-group-text">$</span>
-                              <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" spellcheck="false" data-ms-editor="true" id="">
+                              <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" spellcheck="false" data-ms-editor="true" id="precio_producto">
                               <span class="input-group-text">.00</span>
                             </div>
       
@@ -61,17 +61,17 @@
 
                 <div class="col-6 ">
                         <div class="col-10 m-5 card-descuento">
-                          <h3>
-                            Titulo de producto
+                          <h3 id="tituloproducto">
+                            s
                           </h3>
-                          <p>
-                            Precio total: 50.0
+                          <p >
+                            Precio total: <span id="texto_precio"></span>
                           </p>
                           <p>
-                            Precio descuento: 20.00
+                            Precio descuento: <span id="texto_descuento"> </span>
                           </p>
                           <p>
-                            Total a pagar:30.00
+                            Total a pagar: <span id="texto_total_apagar"></span>
                           </p>
 
                         </div>
