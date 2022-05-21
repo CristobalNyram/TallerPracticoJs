@@ -20,3 +20,34 @@
      padding: 2rem;
      border: 1.5px dotted black;
 }
+
+.preloadar
+{   
+    width: 70px;
+    height: 70px;
+    border: 10px solid rgb(209, 209, 209);
+    border-top:11px solid rgb(18, 0, 49) ; 
+
+    border-radius: 50%;
+
+    animation: girar;
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+
+    position: absolute;
+    top: calc(50%); left:calc(50%);
+    z-index: 1;
+
+}
+
+@keyframes girar 
+{
+    from 
+    {
+        from:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
