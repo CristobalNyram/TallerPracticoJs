@@ -40,6 +40,7 @@
     z-index: 1;
 
 }
+
 .text_preloader
 {
     font-weight: bold;
@@ -81,5 +82,59 @@
     }
     to{
         transform:rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 340px){
+  
+    .preloadar
+    {
+        top: calc(25%); left:calc(25%);
+
+    }
+    .text_preloader
+    {
+        top: calc(32.5%); left:calc(38%);
+        font-size: .85rem;
+
+
+    }
+}
+
+@media only screen and (min-width: 376px){
+  
+    .preloadar
+    {
+        top: calc(35%); left:calc(35%);
+
+    }
+    .text_preloader
+    {
+        top: calc(42%); left:calc(42%);
+
+    }
+}
+
+@media only screen and (min-width:850px)
+{
+    .preloadar
+    {
+        top: calc(35%); left:calc(45%);
+
+    }
+    .text_preloader
+    {
+        top: calc(42%); left:calc(48%);
+
+    }
+}
+
+@media only screen and  (min-width:1400px)
+{
+
+    .text_preloader
+    {
+        top: calc(42.5%); left:calc(47.5%);
+
     }
 }
