@@ -35,22 +35,88 @@ btn_form.addEventListener('click',()=>{
 
 function calcular(...array_numbers)
 {
+ let  sumOfNumbers= Sum(array_numbers);
  let largestNumber=Math.max(...array_numbers);
  let smallestNumber=Math.min(...array_numbers);
  let lenghtOfArrayNumber=array_numbers.length;
- 
- 
-var plus =0
+ let mitadLista=array_numbers.length/2;
+ let arrayIsPar=isPar(mitadLista);
+ let resultOfMedian=operationsForMedian(mitadLista,arrayIsPar,array_numbers);
 
-let plus_arithmetic_average =array_numbers.map(item=>
+let everageOFArray=everage(sumOfNumbers,array_numbers.length);
+
+console.log(resultOfMedian);
+}
+
+//  media aritmetica 
+function Sum(ArrayList)
+{
+    let result=0;
+    for (let index = 0; index < ArrayList.length; index++) {
+         
+        let numberToSum=parseInt(ArrayList[index]);
+        result = numberToSum +result;
+        
+    }
+
+    return result;
+}
+function everage(resultSum,numberMembers)
+{
+    return resultSum/numberMembers;
+}
+
+
+
+const isPar=(mitadLista)=>{
+    if(mitadLista %2===0)
     {
-        let numberItem= parseInt(item);
-        plus+=numberItem;
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
 
-    });
-
- 
 
 
+function operationsForMedian( indice,typeOfArray,numberOFarray){
+    indice=parseInt(indice);
+
+    if(typeOfArray){
+        
+         let medianElement= numberOFarray[indice-1];
+         let medianElement2= numberOFarray[indice];
+         return {medianElement,medianElement2}
+
+
+
+    }
+    else
+    {
+        let medianElement= numberOFarray[indice];
+
+        return medianElement;
+    }
 
 }
+
+
+
+//podemos usar una alternatica a los ciclos for
+
+/*
+array.filer
+array.map
+
+array.reduce--->nos va a permitar sumar elemento por elemento
+array.reduce(
+    (valorAcumulado,nuevoElemento)=>{
+
+    }
+);
+
+*/
+
+
