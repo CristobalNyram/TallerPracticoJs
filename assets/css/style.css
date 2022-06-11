@@ -19,7 +19,20 @@
     height: 100vh;
 }
 
-.item
+.container-grid .item:hover ,.item:hover a
+{    
+    background-color: #1e0f0f;
+
+
+    color:#fd9606;
+    text-shadow: 1px 1px white;
+    font-size: 1.8rem;
+    font-weight: bolder;
+}
+
+
+
+.container-grid .item
 {
     display: flex;
     border: 1px solid white;
@@ -34,6 +47,7 @@
     font-weight: bold;
     font-family: 'Solway', serif;
     font-size: 1.5rem;
+    color: whitesmoke;
 
 }
 .formulario-calculadora
