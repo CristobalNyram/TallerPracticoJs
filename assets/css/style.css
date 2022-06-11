@@ -1,4 +1,33 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Solway&display=swap');
+.container-grid
+{
+   background-color:darkslategray;
+   display: grid;
+   grid-template-rows: 1fr 1fr 1fr ;
+   grid-template-columns: 1fr 1fr ;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.item
+{
+    display: flex;
+    border: 1px solid white;
+    justify-content: center;
+    margin: .5rem;
+    
+
+}
+.item a{
+    align-self: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Solway', serif;
+    font-size: 1.5rem;
+
+}
 .formulario-calculadora
 {
     padding-top: 2em;
@@ -14,6 +43,8 @@
     
 
 }
+
+
 .card-descuento
 {
      display: none;
