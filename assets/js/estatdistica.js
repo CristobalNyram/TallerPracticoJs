@@ -24,8 +24,7 @@ btn_form.addEventListener('click',()=>{
     }
     else
     {
-        let array_numbers= input_numero.split(',');
-
+        let array_numbers = input_numero.split(',').sort();
         calcular(... array_numbers);
 
     }
@@ -45,7 +44,6 @@ function calcular(...array_numbers)
 
 let everageOFArray=everage(sumOfNumbers,array_numbers.length);
 
-console.log(resultOfMedian);
 }
 
 //  media aritmetica 
@@ -84,19 +82,15 @@ const isPar=(mitadLista)=>{
 function operationsForMedian( indice,typeOfArray,numberOFarray){
     indice=parseInt(indice);
 
-    if(typeOfArray){
-        
+    if(typeOfArray){        
          let medianElement= numberOFarray[indice-1];
          let medianElement2= numberOFarray[indice];
          return {medianElement,medianElement2}
-
-
 
     }
     else
     {
         let medianElement= numberOFarray[indice];
-
         return medianElement;
     }
 
