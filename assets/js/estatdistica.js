@@ -21,6 +21,7 @@ btn_form.addEventListener('click',()=>{
     if(input_numero.trim()==='')
     {
         alert('Esta vacio el input');
+        
     }
     else
     {
@@ -41,8 +42,17 @@ function calcular(...array_numbers)
  let mitadLista=array_numbers.length/2;
  let arrayIsPar=isPar(mitadLista);
  let resultOfMedian=operationsForMedian(mitadLista,arrayIsPar,array_numbers);
-
+let resulOfFashion=calculateFashion(...array_numbers);
 let everageOFArray=everage(sumOfNumbers,array_numbers.length);
+
+let resultaMessage=`${everageOFArray}
+
+${resultOfMedian}
+
+${resulOfFashion}
+
+`;
+Swal.fire(resultaMessage);
 
 }
 
@@ -61,7 +71,8 @@ function Sum(ArrayList)
 }
 function everage(resultSum,numberMembers)
 {
-    return resultSum/numberMembers;
+    let result=resultSum/numberMembers;
+    return `El promedio de los numero es ${result}`;
 }
 
 
@@ -85,16 +96,59 @@ function operationsForMedian( indice,typeOfArray,numberOFarray){
     if(typeOfArray){        
          let medianElement= numberOFarray[indice-1];
          let medianElement2= numberOFarray[indice];
-         return {medianElement,medianElement2}
+         return `la medía son estos dos números :${medianElement} ${medianElement2}`;
 
     }
     else
     {
         let medianElement= numberOFarray[indice];
-        return medianElement;
+        return `La media es: ${medianElement}`;
     }
 
 }
+
+
+
+function calculateFashion(...array_numbers)
+{
+    let list =array_numbers;
+    const listCount={};
+    list.map(
+        (elemt)=>{
+            
+            if (listCount[elemt]) {
+                listCount[elemt]+=1;
+    
+    
+            }
+            else
+            {
+                listCount[elemt]=1;
+    
+            }
+            
+    
+        }
+    );
+    
+    const listArray =Object.entries(listCount).sort(
+    
+        (valorAcumulado,nuevoElemento)=>{
+            return valorAcumulado[1]-nuevoElemento[1];
+    
+        }
+    );
+    let fashion =listArray[listArray.length-1];
+
+
+    return `<b>El número que se  repite más veces</b> es ${fashion[0]} y se repité ${fashion[1]} veces`;
+
+
+
+
+
+}
+
 
 
 
